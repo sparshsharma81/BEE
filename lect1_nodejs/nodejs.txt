@@ -9,3 +9,6 @@ package.json --- it stores dependencies
 
 version conflit --- basically when the dependencies are not working properly...
 like our express is 5.0.1 version and dependencies are working on that lower module... so we need to downgrade it .
+
+ek api request me 2 chije hoti hai... path and type 
+like get, post  these are type---- and path is "/user" --- these are the types 

@@ -8,6 +8,9 @@ app.post("/user",(req,res)=>{
 app.get("/",(req,res)=>{
     res.send("This is the home page");
 })
+app.get("*",(req,res)=>{
+    res.send("This is the default port");
+})
 app.listen(PORT,()=>{
     console.log(`${PORT}`);
 });
