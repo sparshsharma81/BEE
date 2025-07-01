@@ -1,0 +1,5 @@
+there are 5 types of api -- 
+post , put , delete, get , patch 
+
+and path -- ("/","/user","/create","/all","/user");
+
