@@ -1,0 +1,7 @@
+database are of two types .... 
+
+orm --- queries are provided for structure query langunage --- that is primsa 
+
+backend scaling --- 
+
+deployment --- aws s3 bucket and ec2 instance 

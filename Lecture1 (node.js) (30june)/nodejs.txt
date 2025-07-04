@@ -1,0 +1,14 @@
+node js --- node js is run time environment for javascript 
+
+we can not run javascript directly in the webbrower--- the javascript engine name is v8 engine
+
+if we want to create a node js service --- npm init 
+npm init -y  ---- auto fills all necessary details 
+
+package.json --- it stores dependencies
+
+version conflit --- basically when the dependencies are not working properly...
+like our express is 5.0.1 version and dependencies are working on that lower module... so we need to downgrade it .
+
+ek api request me 2 chije hoti hai... path and type 
+like get, post  these are type---- and path is "/user" --- these are the types 
