@@ -1,0 +1,13 @@
+its use to check the requried details in the api request 
+from the frontend and also if we have to manipulate request
+
+we use middleware
+
+
+1.GENERIC MIDDLEWARE 
+these middleware run for every api request 
+
+app.use(express.json()); --they are build-in middleware 
+these middleware are provided by the express 
+
+ all the app.use --- they run each time

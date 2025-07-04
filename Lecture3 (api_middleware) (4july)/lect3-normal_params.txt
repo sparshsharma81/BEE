@@ -1,0 +1,58 @@
+params--- way of sending the data to backend from frontend --- this is kind of more secure than query params 
+like the user will see only value ...he will not see the key
+without key..value is useless 
+
+
+Params---- sends only value in URL 
+
+
+
+
+
+    -------------In JavaScript, there are several ways to convert a string to a number:
+
+---------------------------------------------------Converts the string to a number.
+-----------------------------------✅ 1. Number() Function
+
+let str = "42";
+let num = Number(str);
+console.log(num); // 42 (number)
+
+
+✅ 2. parseInt() – for integers
+Useful when converting integer-like strings.
+
+
+let str = "42";
+let num = parseInt(str);
+console.log(num); // 42
+You can also specify the base (radix):
+parseInt("1010", 2); // 10 (binary to decimal)
+
+
+
+✅ 3. parseFloat() – for decimals
+Used to convert string to floating point number.
+
+let str = "42.5";
+let num = parseFloat(str);
+console.log(num); // 42.5
+
+
+
+✅ 4. Unary Plus (+)
+A shorthand and very common trick:
+
+let str = "42";
+let num = +str;
+console.log(num); // 42
+
+
+
+✅ 5. Math.floor(), Math.ceil(), etc.
+If you want integer conversion with rounding:
+
+let str = "42.8";
+let num = Math.floor(str); // 42
+
+

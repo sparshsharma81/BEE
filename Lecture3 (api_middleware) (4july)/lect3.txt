@@ -47,3 +47,28 @@ like array methods..push pop peek shift unshift --- they are defined in prototyp
 
 
 
+
+ //ye basically params ka use kiya hai..?query params ka use hua hai isme...
+                                                 //ye basically api se input k liye hota hai..
+                                                 //jaise localhost:8000/api/abc?
+                                                    /*
+                                                 http://localhost:3000/profile?user=alice&id=101
+                                                 This URL has:
+                                                 ?user=alice&id=101 → query string
+ 
+                                                 user and id → query parameters
+
+                                                 alice and 101 → values
+                                                    */
+
+
+Destructuring --- like in react use state 
+
+const [num1, num2] = [1,2,3,4,5]
+
+num1 contains 1 ;
+num 2 contains 2;
+
+these will store 2 variables --- like these has limitations ...
+
+
