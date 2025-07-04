@@ -1,0 +1,49 @@
+we have to install the express using npm i express 
+and initilze the package.json with npm init
+and start application through nodemon
+
+
+-------------nodemon is installed with npm i nodemon-------------
+
+
+
+now after all the installation things..we are working with queryies...
+
+
+ek variable ya datatype -- kisse bana hai..mtlb uska parent kon hai... 
+javascript objects are derived from null
+
+__proto__ = prototype chain accessor.
+
+Use it to understand or manually set inheritance between objects.
+
+Part of JavaScript’s object model and core inheritance mechanism.
+
+dunedon proto --- 
+
+
+🔄 __proto__ vs prototype
+Term	What it is	Where it's used
+__proto__	Points to the prototype of an object	All objects
+prototype	Property of a function constructor	Used when creating new objects via new
+
+
+
+------------------What is the prototype chain?------------
+JavaScript objects form a chain:
+
+
+Javascript 
+student → person → Object.prototype → null
+This is used for inheritance: when a property/method is not found in the current object, it looks up the prototype chain.
+
+
+whenever we create an object or variable..aur uske andar kitne methods hai --- to vo __proto__ (done dun proto) se pata chalta hai...
+
+
+IMPORTANT --- PROTOTYPE ---------------------------------------------------
+
+like array methods..push pop peek shift unshift --- they are defined in prototype 
+
+
+

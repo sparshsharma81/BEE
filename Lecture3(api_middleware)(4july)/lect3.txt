@@ -1,7 +1,0 @@
-we have to install the express using npm i express 
-and initilze the package.json with npm init
-and start application through nodemon
-
-
--------------nodemon is installed with npm i nodemon-------------
-
