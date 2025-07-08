@@ -1,0 +1,4 @@
+all the api types..they are asynchronous function 
+
+all the callback function should also be asynchronous 
+
