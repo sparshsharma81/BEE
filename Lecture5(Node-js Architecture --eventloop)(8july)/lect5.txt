@@ -2,3 +2,11 @@ all the api types..they are asynchronous function
 
 all the callback function should also be asynchronous 
 
+we are making generic middleware..
+generic middleware --- app.use
+
+
+now after that we are making api specific middleware
+basically we make a function and then we decide it where to use it
+
+app.get are also middelwares ...we can also pass next in that
