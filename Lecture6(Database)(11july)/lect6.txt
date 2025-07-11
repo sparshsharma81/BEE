@@ -1,0 +1,13 @@
+database ---- to store data separately so that any server crash/hack will not leak data 
+
+relational ---- eq --- sql,mysql --- POSTGRESQL---- we can do it with prisma but we can do it without it also 
+
+non-relational --- ex -- NoSql , MongoDb 
+
+
+Non-relational 
+
+SQL --- MongoDb 
+
+----- it has two things --- system storage -- (localhost:27017),(Mongo Shell)
+------cloud storage 
