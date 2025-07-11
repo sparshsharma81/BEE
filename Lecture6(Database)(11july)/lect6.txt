@@ -11,3 +11,49 @@ SQL --- MongoDb
 
 ----- it has two things --- system storage -- (localhost:27017),(Mongo Shell)
 ------cloud storage 
+
+nodejs mongodb driver and mongoose...there are two things
+
+
+
+-------------------MONGODB ARCHITECTURE
+EVERY PROJECT HAS A CLUSTER AVAIABLE FOR FREE VERSION 
+
+CLUSTER --- WE CONNECT OUR SERVER TO THIS 
+
+a cluster can have multiple DB -----database 
+
+same as a row in table ------ identity of a paritucular user 
+
+
+
+
+-------------HOW TO CONNECT CLUSTER --------------
+MongoDb NodeJS Driver 
+mongoose 
+
+------------we can connect with these two ---
+
+npm i mongodb
+
+.env is environment file which is avaiable globally 
+
+
+
+client.db() ------ it will create database 
+
+
+we should call mongodb in app.listen ... so that it is called once 
+
+
+since it is asynchrnous function --- we can use .then and .catch 
+
+whenever we have a work...that is done with asynchrnously..then we can 
+make asynchrnous function or use promise 
+
+and there we pass two things..resolve and reject...
+if the task run successfully..we run resolve..else reject will get call 
+
+.then() in promise---promise resolve successfully 
+.catch() --- in promise --- if the promise is unsuccessfull..then it will go in .catch()
+
