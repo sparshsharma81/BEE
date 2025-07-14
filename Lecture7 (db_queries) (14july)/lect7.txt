@@ -1,6 +1,0 @@
-CRUD OPERATIONS 
-insertone and insertmany
-
-insertone 
-
-try-catch 
