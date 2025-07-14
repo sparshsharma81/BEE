@@ -47,6 +47,20 @@ res.status(201).json({result});
         console.log("Error is running");
     }
 })
+
+app.delete("/user/:id",async (req,res)=>{
+    try{
+        const {id} = req.params;
+        const result = await userCollection.deleteMany({_id:id});
+        res.status(500).json({result,message:"user deleted successfully"});
+        // all the documents with _id ---they will get deleted..but id is unique..so only one is deleted...
+        //we can also pass with name --- then all the document with certain names are deleted 
+
+    }
+    catch(error){
+        res.status(500).json({message:error.message});        
+    }
+})
 app.post("/users",async(req,res)=>{
     try{
         const {users} = req.body;
@@ -56,21 +70,6 @@ app.post("/users",async(req,res)=>{
     }
     catch(error){
         res.status(500).json({message:error.message});
-    }
-})
-
-
-app.delete("/user/:id",async (req,res)=>{
-    try{
-        const {id} = req.params;
-        const result = await userCollection.deleteMany({_id:id});
-        res.status(201).json({result,message:"user deleted successfully"});
-        // all the documents with _id ---they will get deleted..but id is unique..so only one is deleted...
-        //we can also pass with name --- then all the document with certain names are deleted 
-
-    }
-    catch(error){
-        res.status(500).json({message:error.message});        
     }
 })
 
