@@ -5,6 +5,7 @@ require("dotenv").config();
 
 const {MongoClient} = require('mongodb');
 
+const { ObjectId } = require("mongodb"); // Make sure this is at the top
 const url = 'mongodb://localhost:27017';
 
 let userCollection;
@@ -63,7 +64,9 @@ app.post("/users",async(req,res)=>{
 app.delete("/user/:id",async (req,res)=>{
     try{
         const {id} = req.params;
-        const result = await userCollection.deleteMany({_id:id});
+        // const result = await userCollection.deleteOne({ _id: new ObjectId(id) });
+        const result = await userCollection.deleteOne({ _id: new ObjectId(id) });
+
         res.status(201).json({result,message:"user deleted successfully"});
         // all the documents with _id ---they will get deleted..but id is unique..so only one is deleted...
         //we can also pass with name --- then all the document with certain names are deleted 
