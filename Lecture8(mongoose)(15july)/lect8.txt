@@ -1,0 +1,5 @@
+mongoose 
+provide connection method
+provides easy queries for CRUD operation
+ 
+ provide structure to the collection
