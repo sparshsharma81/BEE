@@ -1,0 +1,1 @@
+router is like function... basically it return function 
