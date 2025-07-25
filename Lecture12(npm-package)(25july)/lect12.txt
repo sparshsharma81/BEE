@@ -1,1 +1,5 @@
 here we are writing the code of generating otp 
+
+npm publish --access=public 
+
+sudo apt-get update && sudo apt-get install xdg-utils

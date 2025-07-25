@@ -24,4 +24,4 @@ catch(error){
     throw error;
 }
 
-module.export = 
+module.export = {verifyOtp , generateotp};
