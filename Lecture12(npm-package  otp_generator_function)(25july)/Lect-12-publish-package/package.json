@@ -1,0 +1,16 @@
+{
+  "name": "@sparshsharma81/otp",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sparshsharma81/otp": "^1.0.0",
+    "login": "^0.8.0"
+  }
+}

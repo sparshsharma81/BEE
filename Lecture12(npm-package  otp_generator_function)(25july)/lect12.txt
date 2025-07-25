@@ -1,0 +1,13 @@
+here we are writing the code of generating otp 
+
+npm publish --access=public 
+
+sudo apt-get update && sudo apt-get install xdg-utils
+
+
+Extension : mern stack snippet
+
+/otp/generate   and /otp/verify -- we need to create two files 
+
+
+npm i @sparshsharma81/otp
