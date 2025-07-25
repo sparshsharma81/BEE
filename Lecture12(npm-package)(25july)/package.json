@@ -1,5 +1,5 @@
 {
-  "name": "lecture12(npm-package)(25july)",
+  "name": "@sparshsharma81/otp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sparshsharma81/otp": "^1.0.0",
     "login": "^0.8.0"
   }
 }
