@@ -1,0 +1,11 @@
+csr --- client side rendering 
+ frontend and backend both are different application 
+reqest data from backend and then manipulate it to show on brower
+
+
+server side rendering 
+both ui and api are in same application 
+render the whole ui(html) file on browser 
+example -- public folder , template engeine 
+api request is sended by the same server 
+
