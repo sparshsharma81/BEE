@@ -1,0 +1,108 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskmaster - Todo Application</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Taskmaster</h1>
+    
+    
+    <form id="addTaskForm">
+        <input type="text" id="taskInput" placeholder="Add a new task" required>
+        <button type="submit" id="addTaskBtn">Add Task</button>
+    </form>
+    
+    
+    <div id="taskStats">
+        <input type="text" id="totalTasks" placeholder="Total Tasks" disabled>
+        <input type="text" id="completedTasks" placeholder="Completed Tasks" disabled>
+    </div>
+    
+    
+    <div id="taskActions">
+        <input type="text" id="searchInput" placeholder="Search tasks">
+        <button type="button" id="searchBtn">Search</button>
+        <button type="button" id="completeBtn">Mark Complete</button>
+        <button type="button" id="deleteBtn">Delete Selected</button>
+        <button type="button" id="clearCompleted">Clear Completed</button>
+    </div>
+    
+    
+    <div id="taskList">
+       
+    </div>
+    <div id="taskActions">
+        <button type="button" id="clearSearch">Clear Search</button>
+        <button type="button" id="clearAll">Clear All Tasks</button>
+    </div>
+    <div id = "taskInput">
+        <input type="text" id="taskInput" placeholder="Add a new task" required>
+        <button type="submit" id="addTaskBtn">Add Task</button>
+        </div> 
+
+        
+
+  
+     
+</body>
+<script>
+    const obj = document.getElementById('taskActions');
+    const obj2 = document.getElementById('taskList');
+    const obj3 = document.getElementById('taskInput');
+    
+    document.getElementById('addTaskBtn').addEventListener('click', function(e) {
+
+        e.preventDefault(); // Prevent form submission
+        const newTask = document.createElement('div');
+        newTask.textContent = obj3.value;
+        obj2.append(newTask);
+        obj3.value = ''; // Clear input field
+    });
+
+    document.getElementById('clearSearch').addEventListener('click', function() {
+    
+        console.log('Clear Search button clicked');
+    });
+
+    document.getElementById('clearAll').addEventListener('click', function() {
+    
+        // console.log('Clear All button clicked');
+        obj2.value = ''; // sab saaf kr dega ye..
+        obj3.value = ''; // Clear all tasks
+    });
+</script>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>TaskMaster</h1>
+      <form id="task-form">
+        <input type="text" placeholder="Task..." name="task" />
+        <button>Add Task</button>
+      </form>
+      <div id="filter">
+        <button id ="all" class = "active">All</button>
+        <button id = "active" class = "">Active</button>
+        <button id = "completed" class = "">Completed</button>
+      </div>
+      <div id="clear">
+        <button>Clear Completed</button>
+      </div>
+      
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
