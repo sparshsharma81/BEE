@@ -1,0 +1,12 @@
+javascript is a single threaded language...
+ --one task at a time 
+
+
+ 
+ event loop 
+ in the callback quueue the code waits till the tiem is not completed
+
+
+ asynchrnouns javascript in xml
+ this is used to make api call 
+ this is used to fetch data from the server
