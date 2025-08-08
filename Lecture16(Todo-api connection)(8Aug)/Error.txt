@@ -1,0 +1,24 @@
+Api intergration error detectino 
+
+headers -- information about the header 
+paylaod
+
+in network 
+
+fetch/XHR 
+
+
+
+headers ---- all the informations --api path , status , response headers, request headers, 
+jis browser ya frontend se request gayi hai..uska sara connection 
+
+
+paylaod --- the data which we are sending --- it will be there ..query params
+
+
+
+
+preview 
+
+
+resonse --- jo bhi response jo backend ya server bhejega..vo aayega...

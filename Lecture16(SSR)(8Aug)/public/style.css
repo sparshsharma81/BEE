@@ -1,0 +1,51 @@
+#container{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 2px 1px;
+  border: 1px solid gainsboro;
+  border-radius: 10px ;
+  padding: 10px;
+  width: 85vw;
+  margin: auto;
+  margin-top: 100px;
+}
+
+h1{
+  text-align: center;
+}
+
+#task-form{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+#task-form>input{
+  width: 90%;
+  height: 30px;
+}
+
+#filter{
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#filter>button{
+  padding: 5px;
+}
+
+#clear{
+  display: flex;
+  justify-content: center;
+}
+#clear>button{
+  padding: 5px;
+  background-color: red;
+  color: white;
+}
+
+.active{
+  background-color: green;
+  color: white;
+}
