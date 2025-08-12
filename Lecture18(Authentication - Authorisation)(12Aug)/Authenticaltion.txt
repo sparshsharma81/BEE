@@ -10,3 +10,6 @@ Authorisation --- check if the current user has a required access of a functiona
 authentication --- bcrypt -- to encrypt a string --- hashing encryption --- hashing 
 
 hashing --- it is conversion of one string to another --by adding buffer(random characters ) ,, so that we can no check the original value 
+
+
+decoding it is nearly impossible
