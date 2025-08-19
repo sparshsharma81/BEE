@@ -1,0 +1,10 @@
+withCredentials --- when we need to send cookies from client to server
+then we have a paramenter in axios..that is withCredentials = true;
+it will access the cookies and send it 
+
+
+when the client send the cookie to server..
+then in order to read that ..we need cookie parser 
+
+
+express session

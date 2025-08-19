@@ -1,0 +1,20 @@
+to segregrate user on the basis of  authorized user , role based acccess, premium based access
+
+1.JWT (json web token) -- client server
+
+2.express-session (server)
+
+3.Cookie -- helper 
+
+4. Passport(google authentication) -- it provides that only on server side not on client side 
+
+
+
+JWT --- token based authorization 
+
+1.generate token for a logged in user 
+2.user sends the token everytime it sends a request to backend(server)
+
+
+
+secret -- it is a string which is used to create a unique "signature"
