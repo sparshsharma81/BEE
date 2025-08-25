@@ -1,0 +1,16 @@
+in this app.use("view engine","ejs")
+//this is use to run view engine..
+the form data which strike on my website .....
+
+app.use("view engine" , "ejs") --- 
+
+view engine is a software component that enables the rendering of dynamic content in web applications. It allows developers to create templates with placeholders for data, which are then populated with actual values at runtime. This process generates HTML (or other formats) that can be sent to the client's browser for display.
+
+In the context of Express.js, a popular web application framework for Node.js, the view engine is responsible for rendering the views (templates) used in the application. By setting the view engine to "ejs", we are telling Express to use the EJS (Embedded JavaScript) templating engine for rendering our views.
+
+EJS allows us to embed JavaScript code within our HTML templates, making it easy to generate dynamic content based on the data passed from the server. This is particularly useful for rendering data from a database or user input in a user-friendly format.
+
+Overall, the view engine plays a crucial role in separating the presentation layer from the application logic, making it easier to manage and maintain web applications.
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));

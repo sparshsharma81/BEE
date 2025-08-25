@@ -1,0 +1,9 @@
+
+
+DB_URL = "mongodb+srv://81arvindarora:hr03j2670@sample.hys04ue.mongodb.net/?retryWrites=true&w=majority&appName=sample"
+
+JWT_SECRET = "sparshsharma" 
+
+PORT = 4000
+
+
