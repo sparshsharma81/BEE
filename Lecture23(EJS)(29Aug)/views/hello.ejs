@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello EJS</title>
+    <style>
+        body {
+            background: #f4f6f8;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 480px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 24px;
+        }
+        h1 {
+            color: #2d3a4b;
+            font-size: 2.2rem;
+            margin-bottom: 24px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .contact-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            margin-bottom: 18px;
+            padding: 16px 20px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+            transition: box-shadow 0.2s;
+        }
+        .contact-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        .contact-card h2 {
+            margin: 0 0 8px 0;
+            color: #0077b6;
+            font-size: 1.2rem;
+        }
+        .contact-card h4 {
+            margin: 0;
+            color: #495057;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello <%= name %>!</h1>
+        <% if (contacts && contacts.length) { %>
+            <% contacts.forEach(contact => { %>
+                <div class="contact-card">
+                    <h2><%= contact.name %></h2>
+                    <h4>Phone: <%= contact.phone %></h4>
+                </div>
+            <% }) %>
+        <% } %>
+    </div>
+</body>
+</html>
