@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Taskmaster</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+        h1 {
+            color: #2d3a4b;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 36px;
+            letter-spacing: 1px;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            padding: 28px 22px 22px 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: box-shadow 0.2s;
+        }
+        .product-card:hover {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+        }
+        .product-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            background: #f8fafc;
+        }
+        .product-card h2 {
+            margin: 0 0 10px 0;
+            color: #ff6f61;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        .product-card h3 {
+            margin: 0 0 10px 0;
+            color: #0077b6;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .product-card p {
+            color: #495057;
+            font-size: 1rem;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .product-card button {
+            padding: 10px 28px;
+            background: linear-gradient(90deg, #ff6f61 0%, #fda085 100%);
+            color: #fff;
+            border: none;
+            border-radius: 7px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .product-card button:hover {
+            background: linear-gradient(90deg, #fda085 0%, #ff6f61 100%);
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 0 4px;
+            }
+            .products-grid {
+                gap: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Products</h1>
+        <div class="products-grid">
+            <% products.forEach(product =>{ %>
+                <div class="product-card">
+                    <img src="" alt="Product Image">
+                    <h2><%= product.name %></h2>
+                    <h3>₹ <%= product.price %></h3>
+                    <p><%= product.description %></p>
+                    <button>View</button>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+</html>

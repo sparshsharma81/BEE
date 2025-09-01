@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Taskmaster</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .signup-container {
+            max-width: 420px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+            padding: 40px 32px 32px 32px;
+            position: relative;
+        }
+        .signup-container::before {
+            content: "";
+            position: absolute;
+            top: -32px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 72px;
+            height: 72px;
+            background: #66a6ff;
+            border-radius: 50%;
+            box-shadow: 0 2px 12px rgba(102,166,255,0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .signup-container h1 {
+            color: #2d3a4b;
+            font-size: 2.2rem;
+            margin-bottom: 28px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 7px;
+            color: #495057;
+            font-weight: 500;
+        }
+        form input {
+            width: 100%;
+            padding: 12px 14px;
+            margin-bottom: 20px;
+            border: 1px solid #d1d5db;
+            border-radius: 7px;
+            font-size: 1rem;
+            background: #f8fafc;
+            transition: border-color 0.2s;
+        }
+        form input:focus {
+            border-color: #66a6ff;
+            outline: none;
+            background: #fff;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 13px 0;
+            background: linear-gradient(90deg, #66a6ff 0%, #89f7fe 100%);
+            color: #fff;
+            border: none;
+            border-radius: 7px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 10px;
+            box-shadow: 0 2px 8px rgba(102,166,255,0.10);
+        }
+        button[type="submit"]:hover {
+            background: linear-gradient(90deg, #89f7fe 0%, #66a6ff 100%);
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 18px;
+            color: #495057;
+            font-size: 1rem;
+        }
+        .login-link a {
+            color: #0077b6;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .login-link a:hover {
+            color: #005f87;
+            text-decoration: underline;
+        }
+        @media (max-width: 500px) {
+            .signup-container {
+                padding: 18px 6px 18px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Create Your Account</h1>
+        <form action="/auth/signup" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your full name" required />
+
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required />
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Create a password" required />
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="login-link">
+            Already have an account?
+            <a href="/auth/login">Log in</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<% 'Scriplet' tag for control-flow, no output
+<%_ 'Whitespace Slurping' Scriplet tag, strips all Whitespace before it 
+<$= output value into template (HTML escaped by default)
+<%- unescaped output value into template
+<%# Comment tag, no output
+<%% Outputs a literal '<%'
+
+%> Plain ending tag
