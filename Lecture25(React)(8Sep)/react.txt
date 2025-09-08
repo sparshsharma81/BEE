@@ -1,0 +1,48 @@
+react is a framework
+nextjs is a framework built on top of react 
+
+
+we can do scaling in the servers from express 
+in nextjs..there is no specific packages or libraries for scaling
+nextjs does the scaling automatically
+
+react is a library
+
+
+npx create-react-app my-app
+cd my-app 
+
+
+npx create-next-app@latest my-next-app
+
+
+
+in framework we need to follow proper structure 
+in library we can do anything we want
+
+
+framework is opinionated
+framework -- need to follow proper structure defined by builder 
+
+
+ESLint -- to check the code quality
+there are several rules that we need to define that are in ESLint 
+like to ignore error or show ...it is shown by estlint 
+
+
+
+Prettier -- to format the code 
+React -- to build UI 
+Nextjs -- to build UI with server side rendering and other features
+
+
+
+
+all the work of frontend is collected at a workplace 00
+so we can do all the work in one place 
+
+
+
+
+...we can achieve routing through two things.. -- page routing and app/folder based routing 
+

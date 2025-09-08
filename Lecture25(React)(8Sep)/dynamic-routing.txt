@@ -1,0 +1,7 @@
+same page render with different url
+using ids 
+
+
+since id is dynamic..so we are using square brackets to define dynamic routing
+
+double square brackets -- to define nested dynamic routing 
