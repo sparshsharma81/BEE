@@ -1,0 +1,62 @@
+relation database 
+
+postgres sql
+
+
+elephant db , big companies does not uses mongo db 
+because of consistency
+postgres sql is relational database
+
+
+postgres sql and mysql stores data in the format of table 
+
+relations are four types 
+1 to 1 
+many to 1 
+1 to many 
+many to many 
+
+
+
+we need not to write manual queries ...so we just use prisma
+
+
+prisma is an orm(Object relational mapping) tool 
+prisma -- provides schema --- tables 
+
+we can use prisma for mongodb also 
+
+
+
+now after installing  it ...we need to connect it with nodejs project 
+
+
+
+when we do changes in schmea -- we need to make it more to database 
+and this is known as migration
+..like in our prisma folder we have done changes in schema..prisma ..so 
+we need to do migration 
+
+npx prisma migrate dev --name userTable
+
+
+npx prisma studio ---- this command is to manage the database like which tables do you have and what data are there in that
+
+
+/*
+
+
+Running generate... (Use --skip-generate to skip the generators)
+
+✔ Generated Prisma Client (v6.16.3) to .\node_modules\@prisma\client in 96ms
+
+
+PS C:\Users\Dell\Desktop\vs code output files\.vscode\BEE\Lecture30(Postgres SQL)(3oct)> npx prisma studio
+Environment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+Prisma Studio is up on http://localhost:5555
+Prisma schema loaded from prisma\schema.prisma
+You can now open your browser and start using Prisma Studio.
+
+
+*/
