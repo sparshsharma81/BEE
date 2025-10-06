@@ -18,9 +18,6 @@ many to many
 
 
 
-ps
-
-
 we need not to write manual queries ...so we just use prisma
 
 
@@ -63,3 +60,15 @@ You can now open your browser and start using Prisma Studio.
 
 
 */
+
+
+
+
+
+
+
+
+
+
+
+in this ...the transaction is also available 

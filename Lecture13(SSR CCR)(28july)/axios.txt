@@ -1,7 +1,0 @@
-To use Axios via a Content Delivery Network (CDN) in a web browser, include a script tag in your HTML file.
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-
-
-the public folder is for ui ..
-in order to show the data...we need to bring the data to ui folder 

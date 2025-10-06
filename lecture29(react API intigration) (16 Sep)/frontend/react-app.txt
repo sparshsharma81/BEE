@@ -1,9 +1,0 @@
-//negative matching -- telling the middleware to not to run for these routes 
-
-positive matching -- telling the middleware to run for the given routes 
-//middleware will run for all the routes except the ones mentioned in the matcher array
-
-
-NextResponse.redirect(new URL('/about-2', request.url)) 
-//this thing is used to create a new URL object, which is then passed to the NextResponse.redirect method to perform the redirection.
-export { default } from 'next-auth/middleware'
