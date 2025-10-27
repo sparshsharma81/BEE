@@ -72,3 +72,7 @@ You can now open your browser and start using Prisma Studio.
 
 
 in this ...the transaction is also available 
+
+
+
+//we have done queries till now 

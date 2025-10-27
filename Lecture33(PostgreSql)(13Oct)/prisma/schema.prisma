@@ -27,6 +27,7 @@ model User {
   // createdAt DateTime @default(now())
   // updatedAt DateTime @updatedAt
 
+
   //updatedAt is a prisma function (build in)
 
   id String @id @default(uuid())
@@ -34,11 +35,33 @@ model User {
   name String?
   post Post[]
   comment Comment[]
+  enrollment Enrollment[]
+  //many to many relation with
+  
+  coursers coursers
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   
 }
+
+model Enrollment{
+  id String @id @default(uuid())
+  courseId String 
+  course Courrses @relation(fields: [courseId], references: [id])
+  userId String 
+  user User @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt 
+}
+
+model coursers{
+  id String @id @default(uuid())
+  name String 
+ credits Int
+  
+}
+//we will follow the cartesiona product rule here
 
 model Comment{
   id String @id @default(uuid())
