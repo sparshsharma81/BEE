@@ -1,0 +1,92 @@
+transaction -- these are acid properties 
+(atomicity, consistency, isolation, durability) that ensure reliable 
+processing of database transactions.
+
+
+
+when we are running a process with multiple steps, we want to make sure 
+that either all steps are completed successfully or none of them are done.
+
+
+
+BASIC STEPS IN MONEY TRANSFER TRANSACTION:
+1. BALANCE CHECK: Verify that the sender has sufficient funds.
+2. RECEIVER BAND SERVER CONNECTION
+3. DEDUCT
+4. TRNASFER TO RECEIVE AMOUNT
+5.CREDIT THE AMOUNT TO RECEIVER ACCOUNT
+
+
+
+//now we are making a balance field in the user model so that when we do the 
+transaction..it can store it properly..and also we will make sure that it is 0 by default so that it does not cause any error
+
+now after that... we will be creating the transaction function to have the track record of transactions 
+
+
+
+
+
+
+//this tx is known as transaction client
+//the function of this is to block the changes if any error comes in between the transaction process 
+//if there is errror..then it will lock all the changes made in the transaction 
+
+
+//tbis tx is instance of prisma client
+//and thee operation done usinig is part of locking 
+
+//this is db locking 
+const transaction = await prisma.$transaction(async(tx)=>{
+
+            //this function is responsive for all the rollback if any error comes in the
+            //transactions 
+            //like if there is error in the transaction 
+            // so this function .$transaction will rollback everything 
+
+            //now in this ..there is a tx..which is very important...which is a instance 
+            //of primsa
+
+            //now here we need to do somethings
+            const sender = await tx.user.findUnique({
+
+                //here we have written tx instead of primsa because that at that time..the primsa instance was blocked 
+                
+                where: { id: senderId }
+            });
+
+            const receiver = await tx.user.findUnique({
+                where: { id: receiverId }
+            });
+
+            if (!sender || !receiver) {
+                throw new Error("User not found");
+            }
+
+            if (sender.balance < amount) {
+                throw new Error("Insufficient funds");
+            }
+
+            // Deduct the amount from the sender's balance
+            await tx.user.update({
+                where: { id: senderId },
+                data: { balance: sender.balance - amount }
+            });
+
+            // Create the transaction record
+            const transaction = await tx.transaction.create({
+                data: {
+                    amount,
+                    senderId,
+                    receiverId
+                }
+            });
+
+            // Credit the amount to the receiver's balance
+            await tx.user.update({
+                where: { id: receiverId },
+                data: { balance: receiver.balance + amount }
+            });
+
+            return transaction;
+        });

@@ -1,0 +1,108 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  //so we need to make at least one primary key so that there should not be an error
+  //@id -- we have used that..so the error is not comming...
+  //@unique is there so the error is not comming 
+  //when we create a table..then it is necessary to have a primary key in that
+  // id       Int      @id @default(autoincrement())
+  // //we want that the id should incremenet automatically -- @default (autoincrement())
+
+  // email     String  @unique
+  // //like if we need to make it optional..we need to use ? which will simply does not give error
+  // name String?
+  // createdAt DateTime @default(now())
+  // updatedAt DateTime @updatedAt
+
+  //updatedAt is a prisma function (build in)
+
+  id String @id @default(uuid())
+  email String @unique
+  name String?
+  post Post[]
+  comment Comment[]
+  enrollment Enrollment[]
+
+  //many to many relation with
+  
+  //now we are creating the transaction things
+  balance Float @default(0)
+  //we should give the float to be 0 value by default..so that when it is created...it should not give an error
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  //we will also make sure that all the transacctions that happen in the system... they should be recorded properly
+  sentTrns Transaction[] @relation("sender")
+  receivedTrns Transaction[] @relation("receiver")
+  //now using this..it will know that who is sender and who is receiver
+}
+
+model Enrollment {
+  id String @id @default(uuid())
+  courseId String 
+  course Course @relation(fields: [courseId], references: [id])
+  userId String 
+  user User @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt 
+}
+
+model Course {
+  id String @id @default(uuid())
+  name String 
+  credits Int
+}
+
+model Comment {
+  id String @id @default(uuid())
+  comment String 
+  authorId String
+  author User @relation(fields: [authorId], references: [id])
+  postId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  post Post @relation(fields: [postId], references: [id])
+}
+
+model Post {
+  id String @id @default(uuid())
+  title String 
+  content String 
+  description String 
+  authorId String 
+  author User @relation(fields: [authorId], references: [id])
+  comments Comment[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Transaction {
+  id String @id @default(uuid())
+  //this uuid will generate a unique id for each transaction
+
+  amount Float
+  senderId String 
+  receiverId String 
+  //now this will have the record of all the transaction in this file 
+  //now we are updating the record also 
+
+  //so how will this know that who is the sender and who is the receiver 
+  //so for that ..we will name both of them differently
+  sender User @relation("sender", fields: [senderId], references: [id])
+  receiver User @relation("receiver", fields: [receiverId], references: [id])
+  createdAt DateTime @default(now())
+}

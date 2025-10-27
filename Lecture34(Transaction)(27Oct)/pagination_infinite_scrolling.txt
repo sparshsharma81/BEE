@@ -1,0 +1,30 @@
+now today we are doinng pagination and infinite scrolling
+..basically there are two ways..to do it...
+like we want that 
+
+basically the backend is sipmle but frontend is complex 
+
+
+like here we are using two things
+
+1) offset and limit
+2) cursor based pagination
+
+
+and wee are using here two functions 
+
+take and skip 
+take is the limit --- how many records you want to fetch
+skip is the offset --- how many records you want to skip
+
+
+
+like for example..when we are in page 1 we will skip 0 records and take 10 records
+
+..basically when in page 1 then the posts of 1 to 10 will be shown 
+without skipping any of the records 
+
+
+and when we are going in page2 then it should skip 10 records and take next 10 records
+so that is done by the skip and take function 
+basically the skip keywoard will skip the 10 records and take will take the next 10 records
